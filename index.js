@@ -38,7 +38,7 @@ function handleProfileSelection(event) {
     const nameElement = profileLink.querySelector('figcaption');
 
     const profileName = nameElement ? nameElement.textContent.trim() : null;
-    const profileImage = img ? img.getAttribute('src') : null;
+    const profileImage = img ? img.src : null;
 
     if (profileName) {
         localStorage.setItem('perfilAtivoNome', profileName);
@@ -58,6 +58,6 @@ if (!localStorage.getItem('perfilAtivoNome') || !localStorage.getItem('perfilAti
         const firstImg = firstProfile.querySelector('img');
         const firstName = firstProfile.querySelector('figcaption');
         if (firstName) localStorage.setItem('perfilAtivoNome', firstName.textContent.trim());
-        if (firstImg) localStorage.setItem('perfilAtivoImagem', firstImg.getAttribute('src'));
+        if (firstImg) localStorage.setItem('perfilAtivoImagem', firstImg.src);
     }
 }
