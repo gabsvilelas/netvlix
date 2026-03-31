@@ -1,0 +1,152 @@
+/* Estilos inspirados na Netflix */
+
+body.theme-light {
+    background-color: #f3f3f3;
+    color: #111;
+}
+
+body.theme-light .profile {
+    color: #333;
+}
+
+body.theme-light .profile:hover img {
+    outline-color: #111;
+}
+
+body.theme-light h1,
+body.theme-light .profile figcaption {
+    color: #111;
+}
+
+body.theme-light .profile img {
+    filter: brightness(0.95);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#theme-toggle::before {
+    content: "🌙";
+}
+
+body.theme-light #theme-toggle::before {
+    content: "☀️";
+}
+
+body {
+    background-color: #000;
+    /* cor de fundo preta da página */
+    color: #fff;
+    /* cor do texto branco para contraste */
+    font-family: Arial, sans-serif;
+    /* família de fonte para o texto */
+    margin: 0;
+    /* remove margem padrão do body */
+    padding: 0;
+    /* remove espaçamento interno padrão do body */
+    display: flex;
+    /* ativa layout flexível para centralização */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport */
+}
+
+main {
+    text-align: center;
+    /* centraliza o texto no main */
+}
+
+h1 {
+    font-size: 3rem;
+    /* tamanho fixo do texto do título */
+    margin-bottom: 2rem;
+    /* espaçamento fixo abaixo do título */
+    margin-left: 4rem;
+    /* margem fixa à esquerda do título */
+    margin-right: 4rem;
+    /* margem fixa à direita do título */
+    color: #fff;
+    /* garante que o título seja branco */
+}
+
+.profiles-outer,
+.profiles {
+    list-style: none;
+    /* remove marcadores de lista */
+    margin: 0;
+    /* remove margem padrão da lista */
+    padding: 0;
+    /* remove espaçamento interno da lista */
+}
+
+.profiles {
+    display: flex;
+    /* usa flexbox para layout responsivo dos perfis */
+    flex-wrap: wrap;
+    /* permite quebra de linha */
+    justify-content: center;
+    /* centraliza as linhas horizontalmente */
+    gap: clamp(0.5rem, 2vw, 2rem);
+    /* espaçamento fluido entre as fichas de perfil */
+    margin-left: 4rem;
+    /* margem fixa à esquerda dos perfis */
+    margin-right: 4rem;
+    /* margem fixa à direita dos perfis */
+}
+
+.profile {
+    width: 150px;
+    /* largura fixa para cada perfil */
+    text-decoration: none;
+    /* remove sublinhado de links */
+    color: #ffffff8f;
+    /* cor dos links de perfil com transparência */
+}
+
+.profile:hover img {
+    outline: 2px solid white;
+    /* borda branca ao passar o mouse na imagem */
+    /* box-shadow: inset 0 0 0 2px white; */
+    /* sombra interna comentada (opção alternativa de destaque) */
+}
+
+.profile figure {
+    margin: 0;
+    /* remove margem padrão da tag figure */
+}
+
+.profile img {
+    width: 150px;
+    /* largura fixa da imagem */
+    height: 150px;
+    /* altura fixa da imagem */
+    border-radius: 10px;
+    /* cantos arredondados da imagem */
+    object-fit: cover;
+    /* ajusta a imagem para cobrir área sem distorção */
+}
+
+.profile figcaption {
+    margin-top: 0.5rem;
+    /* espaço acima do texto da legenda */
+    margin-bottom: 0.5rem;
+    /* espaço abaixo do texto da legenda */
+    font-size: 1.2rem;
+    /* tamanho fixo da fonte da legenda */
+}
+
+.profile:hover figcaption {
+    color: #fff;
+    /* deixa o texto da legenda branco ao passar o mouse */
+}
